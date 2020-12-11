@@ -1,2 +1,2 @@
 # mod Calculator
-https://hsq-uqu.github.io/mod26
+https://hsq-uqu.github.io/mod-calculator
