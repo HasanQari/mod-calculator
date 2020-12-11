@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Mod 26 Calculator</title>
+    <title>Mod Calculator</title>
 </head>
 
 <body class="p-4 mb-2 bg-dark text-white">
@@ -18,9 +18,13 @@
         <div class="card text-center text-muted mx-auto align-middle"
             style="width: 18rem;display: flex;justify-content: center;align-items: center;">
             <div class="card-body">
-                <h5 class="card-title">Mod 26 Calculator</h5>
-                <input type="text" id="num" class="form-control mx-auto mb-2" required autofocus=""
-                    style="width: 30%;text-align: center;">
+                <h5 class="card-title">Mod Calculator</h5>
+                <div style="display: inline;">
+                    <input type="text" id="num" class="form-control mx-auto mb-2 d-inline" required autofocus=""
+                        style="width: 30%;text-align: center;"> mod
+                    <input type="text" id="mod" class="form-control mx-auto mb-2 d-inline" required autofocus=""
+                        style="width: 30%;text-align: center;">
+                </div>
                 <input type="text" id="Result" class="form-control mx-auto bg-white mb-2" readonly
                     style="border: none;width: 50%;text-align: center;">
                 <button class="btn btn-primary btn-block" onclick="mod()">Calculate</button>
@@ -32,9 +36,10 @@
     <script>
         function mod() {
             let n = Number(document.querySelector("#num").value);
+            let m = Number(document.querySelector("#mod").value);
             let i;
-            for (i = 0; i < 26; i++) {
-                if ((n * i) % 26 === 1) {
+            for (i = 0; i < m; i++) {
+                if ((n * i) % m === 1) {
                     document.getElementById("Result").value = i;
                     break
                 }
