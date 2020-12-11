@@ -26,7 +26,7 @@
                         style="width: 30%;text-align: center;">
                 </div>
                 <input type="text" id="Result" class="form-control mx-auto bg-white mb-2" readonly
-                    style="border: none;width: 50%;text-align: center;">
+                    style="border: none;width: 60%;text-align: center;">
                 <button class="btn btn-primary btn-block" onclick="mod()">Calculate</button>
             </div>
         </div>
@@ -42,6 +42,8 @@
                 if ((n * i) % m === 1) {
                     document.getElementById("Result").value = i;
                     break
+                } else {
+                    document.getElementById("Result").value = 'No mod for '+n;
                 }
             }
         }
